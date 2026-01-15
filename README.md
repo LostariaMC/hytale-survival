@@ -13,7 +13,7 @@ Since Hypixel has not yet published the Hytale server JAR to Maven Central, it m
 
 Due to the server JAR embedding internal Maven metadata (parent POM and unresolved properties), an additional manual step is required to make the dependency usable in external projects.
 
-#### Step 1 : Install the server JAR into the local Maven repository
+#### Step 1: Install the server JAR into the local Maven repository
 
 ```bash
 # Windows
@@ -25,10 +25,9 @@ mvn install:install-file \
  -Dpackaging=jar
 ```
 
-#### Step 2 : Replace the generated POM with a minimal one
+#### Step 2: Replace the generated POM with a minimal one
 Edit the following file:
 ```
-# Windows
 %USERPROFILE%\.m2\repository\com\hypixel\hytale\Server\0.0.0-local\Server-0.0.0-local.pom
 ```
 
