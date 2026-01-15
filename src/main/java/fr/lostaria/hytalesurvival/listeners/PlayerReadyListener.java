@@ -1,0 +1,21 @@
+package fr.lostaria.hytalesurvival.listeners;
+
+import com.hypixel.hytale.component.Ref;
+import com.hypixel.hytale.component.Store;
+import com.hypixel.hytale.server.core.Message;
+import com.hypixel.hytale.server.core.event.events.player.PlayerReadyEvent;
+import com.hypixel.hytale.server.core.universe.PlayerRef;
+import com.hypixel.hytale.server.core.universe.world.storage.EntityStore;
+import com.hypixel.hytale.server.core.util.EventTitleUtil;
+
+public class PlayerReadyListener {
+
+    public void onPlayerReady(PlayerReadyEvent event) {
+        Ref<EntityStore> ref = event.getPlayerRef();
+        Store<EntityStore> store = ref.getStore();
+        PlayerRef playerRef = store.getComponent(ref, PlayerRef.getComponentType());
+        if (playerRef == null) return;
+        EventTitleUtil.showEventTitleToPlayer(playerRef, Message.raw("Bon jeu sur Lostaria !"), Message.raw("Bienvenue " + playerRef.getUsername()), false);
+    }
+
+}
