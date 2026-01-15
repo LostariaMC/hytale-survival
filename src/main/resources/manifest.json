@@ -1,0 +1,22 @@
+{
+  "Group": "Lostaria",
+  "Name": "HytaleSurvival",
+  "Version": "1.0",
+  "Description": "Hytale plugin for experimentation",
+  "Authors": [
+    {
+      "Name": "Erpriex"
+    }
+  ],
+  "Website": "lostaria.fr",
+  "ServerVersion": "*",
+  "Dependencies": {
+
+  },
+  "OptionalDependencies": {
+
+  },
+  "DisabledByDefault": false,
+  "Main": "fr.lostaria.hytalesurvival.HytaleSurvival",
+  "IncludesAssetPack": false
+}
